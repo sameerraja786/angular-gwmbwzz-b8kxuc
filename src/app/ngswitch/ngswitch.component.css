@@ -1,0 +1,21 @@
+*
+{
+  margin:0px;
+  padding: 0px;
+}
+body
+{
+ background-color: whitesmoke;
+}
+table,th,td
+{
+ border: 1px solid red;
+}
+.red
+{
+  color: red;
+}
+.size20
+{
+  font-size: 20px;
+}

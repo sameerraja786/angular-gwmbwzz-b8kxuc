@@ -1,0 +1,19 @@
+<h1>This is ngifthen example;</h1>
+<ng-container
+      *ngIf="isLoggedIn; then logIn; else logOut">
+    </ng-container>
+    <ng-template #logIn>
+        Hello, Admin
+    </ng-template>
+    <ng-template #logOut>
+        Please Signin
+    </ng-template>
+
+
+    <button (click)="isValid = !isValid">update</button>
+
+       <div *ngIf="isValid;then content else other_content"></div>
+       
+       <ng-template #content>then content here...</ng-template>
+       <ng-template #other_content>else other content here...</ng-template> 
+       

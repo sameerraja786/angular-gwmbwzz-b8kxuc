@@ -1,0 +1,35 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Student Record</h1>
+/ <table>
+  <tr>
+    <th>S.No</th>
+    <th>Name</th>
+    <th>Country</th>
+    <th>Roll No</th>
+    <th>Age</th>
+
+  </tr>
+  <tr *ngFor="let peo of people; let i = index " [ngStyle]="{'color':getcolor(peo.country)}" >
+    <td>{{i+1}}</td>
+    <td>{{peo.name}}</td>
+    <td>{{peo.country}}</td>
+    <td>{{peo.rollno}}</td>
+    <td>{{peo.age}}</td>
+
+  </tr>
+
+</table>
+
+
+<ul  *ngFor="let peo of people">
+  <li [ngStyle]="{'color':getcolor(peo.country)}" > {{peo.name}} -- {{peo.country}}
+  </li>
+</ul>
+
+<div [ngClass]="['red','size20']">Red text with size 20px</div>
+  </body>
+</html>
+<button class="btn btn-primary">submit</button>

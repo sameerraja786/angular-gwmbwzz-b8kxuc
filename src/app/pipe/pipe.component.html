@@ -1,0 +1,16 @@
+<table class = "border">
+      <tr>
+          <th>Student ID</th>
+          <th>Name</th>
+          <th>DOB</th>
+          <th>Gender</th>
+          <th>CourseFee</th>            
+      </tr>
+      <tr *ngFor='let student of students'>
+          <td>{{student.ID | uppercase}}</td>
+          <td>{{student.Name | myTitle:student.Gender}}</td>
+          <td>{{student.DOB | date:'dd/MM/yyyy'}}</td>
+          <td>{{student.Gender | lowercase}}</td>
+          <td>{{student.CourseFee | currency:'USD':true}}</td>
+      </tr>
+</table>
